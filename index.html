@@ -20,7 +20,7 @@ color:#fff;
 overflow-x:hidden;
 }
 
-/* intro */
+/* Intro Screen */
 #intro{
 position:fixed;
 inset:0;
@@ -58,7 +58,7 @@ to{opacity:1;transform:scale(1)}
 to{opacity:0;visibility:hidden}
 }
 
-/* background */
+/* Background */
 .bg{
 position:fixed;
 inset:0;
@@ -88,7 +88,7 @@ z-index:-1;
 to{transform:translateY(-300px)}
 }
 
-/* hero */
+/* Hero */
 .hero{
 text-align:center;
 padding:85px 20px 55px;
@@ -114,6 +114,14 @@ font-size:22px;
 margin-top:18px;
 }
 
+.gold-line{
+width:120px;
+height:3px;
+background:#d4af37;
+margin:22px auto 0;
+border-radius:10px;
+}
+
 .badges{
 margin-top:25px;
 display:flex;
@@ -129,7 +137,7 @@ padding:10px 18px;
 border-radius:30px;
 }
 
-/* sections */
+/* Sections */
 .wrap{
 max-width:1050px;
 margin:auto;
@@ -154,6 +162,11 @@ padding:38px;
 margin-bottom:40px;
 box-shadow:0 0 30px rgba(212,175,55,.08);
 animation:rise .8s ease both;
+transition:.35s;
+}
+
+.service:hover{
+transform:translateY(-6px);
 }
 
 @keyframes rise{
@@ -197,6 +210,7 @@ font-weight:bold;
 color:#d4af37;
 }
 
+/* Buttons */
 .cta{
 text-align:center;
 padding-top:25px;
@@ -212,14 +226,16 @@ font-weight:800;
 font-size:21px;
 text-decoration:none;
 box-shadow:0 0 25px rgba(212,175,55,.30);
+animation:pulse 2.2s infinite;
 }
 
-.note{
-margin-top:16px;
-opacity:.72;
+@keyframes pulse{
+50%{
+box-shadow:0 0 35px rgba(212,175,55,.45);
+}
 }
 
-/* floating whatsapp */
+/* Floating WhatsApp */
 .float-wa{
 position:fixed;
 bottom:22px;
@@ -233,10 +249,13 @@ text-decoration:none;
 box-shadow:0 0 25px rgba(212,175,55,.28);
 }
 
+/* Footer */
 footer{
 text-align:center;
-padding:35px;
-opacity:.55;
+padding:55px 20px 30px;
+opacity:.42;
+font-size:14px;
+letter-spacing:2px;
 }
 </style>
 </head>
@@ -270,6 +289,8 @@ TOPUP STORE
 <div class="sub">
 شحن ألعاب وتطبيقات بسرعة وأمان
 </div>
+
+<div class="gold-line"></div>
 
 <div class="badges">
 <div class="badge">Fast Delivery</div>
@@ -319,7 +340,6 @@ TOPUP STORE
 
 </div>
 
-
 <div class="service">
 
 <div class="service-top">
@@ -334,17 +354,12 @@ TOPUP STORE
 
 </div>
 
-
 <div class="cta">
 
 <a class="btn"
 href="https://wa.me/963936054719?text=مرحبا اريد حجز طلب من TopUp Store">
 تواصل معنا لحجز طلبك
 </a>
-
-<div class="note">
-يمكن إضافة خدمات جديدة بسهولة لاحقًا.
-</div>
 
 </div>
 
@@ -356,7 +371,7 @@ WhatsApp
 </a>
 
 <footer>
-TopUp Store Elite © 2026
+Powered by Pixel
 </footer>
 
 </body>
