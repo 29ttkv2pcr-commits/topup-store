@@ -3,110 +3,248 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>TopUp Store</title>
+<title>TopUp Store Premium</title>
 
 <style>
-body{
+*{
 margin:0;
-background:#0b0b0b;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:#050505;
 color:white;
-font-family:Arial;
-text-align:center;
+overflow-x:hidden;
+}
+
+/* animated premium background */
+.bg{
+position:fixed;
+inset:0;
+background:
+radial-gradient(circle at 15% 20%,rgba(212,175,55,.18),transparent 35%),
+radial-gradient(circle at 80% 25%,rgba(212,175,55,.10),transparent 30%),
+radial-gradient(circle at 60% 80%,rgba(212,175,55,.12),transparent 35%);
+animation:floatbg 10s infinite alternate ease-in-out;
+z-index:-2;
+}
+
+@keyframes floatbg{
+from{transform:translateY(0)}
+to{transform:translateY(-45px)}
+}
+
+/* floating particles */
+.particles{
+position:fixed;
+inset:0;
+background-image:
+radial-gradient(#d4af37 1px,transparent 1px);
+background-size:40px 40px;
+opacity:.06;
+animation:move 30s linear infinite;
+z-index:-1;
+}
+
+@keyframes move{
+from{transform:translateY(0)}
+to{transform:translateY(-300px)}
 }
 
 .hero{
-padding:80px 20px;
+padding:70px 20px 50px;
+text-align:center;
 }
 
-.logo{
-font-size:52px;
+.logo-img{
+width:130px;
+height:130px;
+border-radius:28px;
+border:1px solid rgba(212,175,55,.35);
+box-shadow:0 0 30px rgba(212,175,55,.20);
+margin:auto auto 30px;
+background:#111;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:34px;
+font-weight:900;
+color:#d4af37;
+}
+
+.brand{
+font-size:64px;
+font-weight:900;
+letter-spacing:2px;
+color:#d4af37;
+text-shadow:0 0 20px rgba(212,175,55,.35);
+}
+
+.sub{
+font-size:24px;
+margin-top:18px;
+opacity:.92;
+}
+
+.wrap{
+max-width:950px;
+margin:auto;
+padding:35px 20px 100px;
+}
+
+.panel{
+background:rgba(20,20,20,.82);
+backdrop-filter:blur(14px);
+border:1px solid rgba(212,175,55,.22);
+border-radius:28px;
+padding:42px;
+margin-bottom:38px;
+box-shadow:
+0 0 30px rgba(0,0,0,.35),
+0 0 30px rgba(212,175,55,.08);
+}
+
+.panel h2{
+text-align:center;
+font-size:38px;
+color:#d4af37;
+margin-bottom:30px;
+}
+
+.row{
+display:flex;
+justify-content:space-between;
+gap:20px;
+padding:18px 0;
+border-bottom:1px solid rgba(255,255,255,.08);
+flex-wrap:wrap;
+font-size:22px;
+}
+
+.price{
 font-weight:bold;
 color:#d4af37;
 }
 
-.subtitle{
-font-size:22px;
-margin-top:20px;
-}
-
-.section{
-padding:50px 20px;
-}
-
-.card{
-background:#161616;
-max-width:500px;
-margin:30px auto;
-padding:30px;
-border-radius:20px;
-border:1px solid #d4af37;
-}
-
-h2{
-color:#d4af37;
-}
-
-.price{
-padding:10px;
+.cta{
+text-align:center;
+padding-top:20px;
 }
 
 .btn{
 display:inline-block;
 background:#d4af37;
-color:black;
-padding:15px 25px;
-border-radius:12px;
+color:#111;
+padding:20px 42px;
+border-radius:16px;
+font-weight:800;
+font-size:21px;
 text-decoration:none;
-font-weight:bold;
-margin-top:20px;
+box-shadow:0 0 25px rgba(212,175,55,.30);
+}
+
+.note{
+margin-top:18px;
+opacity:.72;
+}
+
+footer{
+text-align:center;
+padding:40px;
+opacity:.55;
 }
 </style>
 
 </head>
 <body>
 
-<div class="hero">
-<div class="logo">TOPUP STORE</div>
+<div class="bg"></div>
+<div class="particles"></div>
 
-<p class="subtitle">
-شحن ألعاب وتطبيقات بسرعة وأمان
-</p>
+<section class="hero">
+
+<!-- مؤقتًا مكان اللوغو، بعدين فيك تستبدله بصورتك -->
+<div class="logo-img">
+TS
 </div>
 
-<div class="section">
+<div class="brand">
+TOPUP STORE
+</div>
 
-<div class="card">
+<div class="sub">
+Premium Digital Top-Up Services
+</div>
+
+</section>
+
+
+<div class="wrap">
+
+<div class="panel">
+
 <h2>JAWAKER</h2>
 
-<div class="price">10,000 Coins — $1.26</div>
-<div class="price">Red Booster — $1.74</div>
-<div class="price">Blue Booster — $8.40</div>
-<div class="price">Black Booster — $15.225</div>
-<div class="price">Gold Booster — $27.30</div>
+<div class="row">
+<span>Jawaker Coins | جواكر كوينز</span>
+<span class="price">$1.26</span>
+</div>
 
-<a class="btn"
-href="https://wa.me/963936054719">
-تواصل معنا لحجز طلبك
-</a>
+<div class="row">
+<span>Red Booster | المسرع الأحمر</span>
+<span class="price">$1.74</span>
+</div>
+
+<div class="row">
+<span>Blue Booster | المسرع الأزرق</span>
+<span class="price">$8.40</span>
+</div>
+
+<div class="row">
+<span>Black Booster | المسرع الأسود</span>
+<span class="price">$15.225</span>
+</div>
+
+<div class="row">
+<span>Gold Booster | المسرع الذهبي</span>
+<span class="price">$27.30</span>
+</div>
 
 </div>
 
 
-<div class="card">
+<div class="panel">
+
 <h2>SUM MATCH</h2>
 
-<div class="price">
-10,000 Coins — $1.365
+<div class="row">
+<span>10,000 Coins | 10 الاف كوينز</span>
+<span class="price">$1.365</span>
 </div>
 
+</div>
+
+
+<div class="cta">
+
 <a class="btn"
-href="https://wa.me/963936054719">
+href="https://wa.me/963936054719?text=مرحبا اريد حجز طلب من TopUp Store">
 تواصل معنا لحجز طلبك
 </a>
 
+<div class="note">
+إضافة خدمات مستقبلية سهلة بتكرار أي سطر أسعار.
 </div>
 
 </div>
+
+</div>
+
+<footer>
+TopUp Store Premium © 2026
+</footer>
 
 </body>
 </html>
